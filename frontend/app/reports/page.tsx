@@ -9,9 +9,6 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
 } from 'recharts'
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart'
 
@@ -46,38 +43,36 @@ export default function ReportsPage() {
         {/* Chart */}
         <Card className="p-6">
           <h2 className="text-lg font-display font-semibold mb-6">Monthly Payment Trend</h2>
-          <div className="h-[400px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={mockMonthlyData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--color-border))" />
-                <XAxis
-                  dataKey="month"
-                  stroke="hsl(var(--color-foreground) / 0.5)"
-                  style={{ fontSize: '12px' }}
-                />
-                <YAxis
-                  stroke="hsl(var(--color-foreground) / 0.5)"
-                  style={{ fontSize: '12px' }}
-                  tickFormatter={(value) => `₹${(value / 1000000).toFixed(0)}M`}
-                />
-                <ChartTooltip
-                  content={
-                    <ChartTooltipContent
-                      formatter={(value) => [
-                        `₹${(Number(value) / 1000000).toFixed(2)}M`,
-                        'Amount',
-                      ]}
-                    />
-                  }
-                />
-                <Bar
-                  dataKey="amount"
-                  fill="hsl(var(--color-chart-1))"
-                  radius={[8, 8, 0, 0]}
-                />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
+          <ChartContainer config={{ amount: { label: 'Amount', color: 'var(--color-chart-1)' } }} className="h-[400px] w-full">
+            <BarChart data={mockMonthlyData}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
+              <XAxis
+                dataKey="month"
+                stroke="hsl(var(--color-foreground) / 0.5)"
+                style={{ fontSize: '12px' }}
+              />
+              <YAxis
+                stroke="hsl(var(--color-foreground) / 0.5)"
+                style={{ fontSize: '12px' }}
+                tickFormatter={(value) => `₹${(value / 1000000).toFixed(0)}M`}
+              />
+              <ChartTooltip
+                content={
+                  <ChartTooltipContent
+                    formatter={(value) => [
+                      `₹${(Number(value) / 1000000).toFixed(2)}M`,
+                      'Amount',
+                    ]}
+                  />
+                }
+              />
+              <Bar
+                dataKey="amount"
+                fill="var(--color-chart-1)"
+                radius={[8, 8, 0, 0]}
+              />
+            </BarChart>
+          </ChartContainer>
         </Card>
 
         {/* Additional Info */}

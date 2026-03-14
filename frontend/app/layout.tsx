@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono, EB_Garamond, DM_Mono } from 'next/font/google'
+import { Inter, DM_Sans, DM_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const geist = Geist({ subsets: ["latin"] });
-const geistMono = Geist_Mono({ subsets: ["latin"] });
-const ebGaramond = EB_Garamond({ subsets: ["latin"], variable: "--font-display" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 const dmMono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono-data" });
 
 export const metadata: Metadata = {
@@ -37,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" style={{ "--font-display": ebGaramond.style.fontFamily, "--font-mono-data": dmMono.style.fontFamily } as React.CSSProperties}>
-      <body className={`${geist.className} font-sans antialiased`}>
+    <html lang="en" className={`${inter.variable} ${dmSans.variable} ${dmMono.variable}`}>
+      <body className="antialiased">
         {children}
         <Analytics />
       </body>

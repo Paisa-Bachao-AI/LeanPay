@@ -21,8 +21,8 @@ export function Sidebar() {
       <div className="px-6 py-8 border-b border-sidebar-border">
         <Link href="/dashboard" className="flex items-center gap-2">
           <FileText className="h-6 w-6 text-sidebar-primary" />
-          <h1 className="text-xl font-display font-semibold text-sidebar-foreground">
-            CleanPayout
+          <h1 className="text-xl font-display font-semibold text-sidebar-foreground tracking-tight">
+            LeanPay
           </h1>
         </Link>
       </div>
@@ -52,7 +52,7 @@ export function Sidebar() {
       
       {/* Footer */}
       <div className="border-t border-sidebar-border px-6 py-4 text-sm text-sidebar-foreground/60">
-        <p>© 2024 CleanPayout</p>
+        <p>© 2025 LeanPay</p>
       </div>
     </aside>
   )
