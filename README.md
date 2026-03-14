@@ -1,7 +1,15 @@
 # LeanPay
 
 LeanPay is an AI-powered invoice processing and compliance platform. Upload an invoice, and LeanPay automatically validates it against compliance rules, checks for fraud signals, scores vendor risk, and tells you whether to approve or block payment — in seconds.
+<img width="1870" height="999" alt="Image" src="https://github.com/user-attachments/assets/b3f3ee6f-2452-4133-8151-13f1aa845b1c" />
 
+<img width="1787" height="936" alt="Image" src="https://github.com/user-attachments/assets/e4333461-b2aa-43a4-942d-42ec1d6329d4" />
+
+<img width="1079" height="913" alt="Image" src="https://github.com/user-attachments/assets/0f672c38-5d0a-43d4-afe8-fbff99732002" />
+
+<img width="1886" height="987" alt="Image" src="https://github.com/user-attachments/assets/6a758af5-2781-4cee-83fe-57269de472ed" />
+
+<img width="1885" height="941" alt="Image" src="https://github.com/user-attachments/assets/3e8d59e7-ea8f-4084-bdfc-693f0cc79be7" />
 ---
 
 ## What it does
