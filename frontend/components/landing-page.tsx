@@ -356,36 +356,39 @@ export function LandingPage() {
 
       <div className="ui-layer">
         <div className="top-left-meta">
-          <span className="meta-text">Smart Validation</span>
-          <span className="meta-text" style={{ marginTop: '0.5rem', opacity: 0.4, fontWeight: 400 }}>Verification in progress...</span>
+          <span className="meta-text" style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '-0.03em', opacity: 1 }}>LeanPay</span>
+          <div style={{ display: 'flex', gap: '12px', opacity: 0.6, marginTop: '0.5rem' }}>
+            {[0, 1, 2].map((i) => (
+              <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" />
+              </svg>
+            ))}
+          </div>
         </div>
 
         <div className="top-right-meta">
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
-            <span className="meta-text" style={{ fontSize: '1.25rem', fontWeight: 800, letterSpacing: '-0.02em', opacity: 1 }}>LeanPay</span>
-            <div style={{ display: 'flex', gap: '12px', opacity: 0.6 }}>
-              {[0, 1, 2].map((i) => (
-                <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" />
-                </svg>
-              ))}
-            </div>
+          <div style={{ display: 'flex', gap: '12px', opacity: 0.6 }}>
+            {[0, 1, 2].map((i) => (
+              <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" />
+              </svg>
+            ))}
           </div>
         </div>
 
         <div className="center-content">
-          <div style={{ position: 'absolute', top: '-8rem', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', maxWidth: '540px', width: '100%' }}>
-            <h1 style={{ fontFamily: "'Inter', sans-serif", fontSize: '2.75rem', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.15, marginBottom: '1rem', color: '#0F172A', textShadow: '0px 0px 60px rgba(248, 250, 252, 0.95), 0px 0px 100px rgba(255, 255, 255, 0.7)' }}>
+          <div style={{ position: 'absolute', top: '-9rem', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', maxWidth: '700px', width: '100%' }}>
+            <h1 style={{ fontFamily: "'Inter', sans-serif", fontSize: '3.5rem', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.15, marginBottom: '1rem', color: '#0F172A', textShadow: '0px 0px 60px rgba(248, 250, 252, 0.95), 0px 0px 100px rgba(255, 255, 255, 0.7)' }}>
               Invoice intelligence meets compliance
             </h1>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.15rem', fontWeight: 500, lineHeight: 1.55, color: '#0F172A', opacity: 0.85, textShadow: '0px 0px 40px rgba(248, 250, 252, 0.9), 0px 0px 60px rgba(255, 255, 255, 0.6)' }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.35rem', fontWeight: 500, lineHeight: 1.55, color: '#0F172A', opacity: 0.85, textShadow: '0px 0px 40px rgba(248, 250, 252, 0.9), 0px 0px 60px rgba(255, 255, 255, 0.6)' }}>
               Automatically validate invoices, catch compliance issues, and streamline your payment process with AI-powered accuracy and trust.
             </p>
           </div>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'baseline', color: '#0F172A', marginTop: '9rem' }}>
             <span className="counter-number" ref={counterRef} style={{ color: '#0F172A', textShadow: '0px 0px 40px rgba(248, 250, 252, 0.9), 0px 0px 80px rgba(248, 250, 252, 0.6)' }}>0</span>
           </div>
-          <span className="counter-label">Invoices Processed</span>
+          <span className="counter-label" style={{ textShadow: '0px 0px 30px rgba(248, 250, 252, 0.9), 0px 0px 60px rgba(255, 255, 255, 0.6)' }}>Invoices Processed</span>
         </div>
 
         <div style={{ position: 'absolute', bottom: '1.5rem', left: '50%', transform: 'translateX(-50%)', zIndex: 30 }}>
